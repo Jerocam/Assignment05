@@ -1,14 +1,17 @@
 //STEP 1
 /*let movies = ["The Terminator", "Alien3", "Twelve Monkey", "Jurassic Park", "Blade Runner 2049"]
-window.console.log(movies[2]);
+window.console.log(movies[1]);
 */
 //STEP 2
 /*let movies = [];
+function newMovies(){
 movies[0] = "Back to the Future";
 movies[1] = "Back to the Future2";
 movies[2] = "Aliens";
 movies[3] = "Star Wars Episode III";
 movies[4] = "Nemesis Evangelion";
+}
+
 
 window.console.log(movies[0]);*/
 
