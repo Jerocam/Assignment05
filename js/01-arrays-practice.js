@@ -3,7 +3,6 @@
 window.console.log(movies[1]);
 */
 //STEP 2
-<<<<<<< HEAD
 /*function passMovies(n){
     let movies = [
         "The Terminator",
@@ -14,17 +13,6 @@ window.console.log(movies[1]);
     ];
     return movies[n];
 }
-=======
-/*let movies = [];
-function newMovies(){
-movies[0] = "Back to the Future";
-movies[1] = "Back to the Future2";
-movies[2] = "Aliens";
-movies[3] = "Star Wars Episode III";
-movies[4] = "Nemesis Evangelion";
-}
-
->>>>>>> f81b2174f765995ea286d8751972944c7c8b4c90
 
 window.console.log(passMovies(1));*/
 
