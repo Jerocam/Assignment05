@@ -3,51 +3,78 @@
 window.console.log(movies[2]);
 */
 //STEP 2
-/*let movies = [];
-movies[0] = "Back to the Future";
-movies[1] = "Back to the Future2";
-movies[2] = "Aliens";
-movies[3] = "Star Wars Episode III";
-movies[4] = "Nemesis Evangelion";
+/*function passMovies(n){
+    let movies = [
+        "The Terminator",
+        "Alien3",
+        "Aliens",
+        "New york lost",
+        "Chucky"
+    ];
+    return movies[n];
+}
 
-window.console.log(movies[0]);*/
+window.console.log(passMovies(1));*/
 
 //STEP 3
-/*let movies = [];
-
-movies[0] = "Back to the Future";
-movies[1] = "Back to the Future2";
-movies[2] = "Aliens";
-movies[3] = "Star Wars Episode III";
-movies[4] = "Nemesis Evangelion";
-movies[movies.length] = "Final Fantasy Within the Spirit";
-
-window.console.log(movies.length);*/
+/*function passMovies(){
+    let movies = [
+        "The Terminator",
+        "Alien3",
+        "Aliens",
+        "New york lost",
+        "Chucky"
+    ];
+    movies[movies.length] = "Final Fantasy Within the Spirit";
+    return movies.length;
+}
+window.console.log(passMovies());*/
 
 //STEP 4
-/*let movies = ["Ace Venture", "Alien", "The Terminator 2", "Rocky", "RockyII"];
-movies.shift();
+/*let movies = [
+    "Ace Venture", 
+    "Alien", 
+    "The Terminator 2", 
+    "Rocky", 
+    "RockyII"
+];
 
-movies.forEach(function(movies){
-    window.console.log(movies);
-});*/
+movies.shift();
+window.console.log(movies);*/
 
 //STEP 5
-/*let movies = ["Resident Evil","Rambo","Ace Venture", "Alien", "The Terminator 2", "Rocky", "RockyII"];
+/*let movies = [
+    "Resident Evil",
+    "Rambo",
+    "Ace Venture", 
+    "Alien", 
+    "The Terminator 2", 
+    "Rocky", 
+    "RockyII"
+];
 
 let i;
 for(i=0;i<movies.length;i++){
     window.console.log(movies[i]);
-}
-*/
+}*/
+
 //STEP 6
-/*let movies = ["Resident Evil","Rambo","Ace Venture", "Alien", "The Terminator 2", "Rocky", "RockyII"];
+/*let movies = [
+    "Resident Evil",
+    "Rambo",
+    "Ace Venture", 
+    "Alien", 
+    "The Terminator 2", 
+    "Rocky", 
+    "RockyII"
+];
+
 let favMovies;
 
 for(favMovies in movies){
     window.console.log(movies[favMovies]);
-}
-*/
+}*/
+
 //STEP 7
 /*let movies = ["Resident Evil","Rambo","Ace Venture", "Alien", "The Terminator 2", "Rocky", "RockyII"];
 let favMovies;
@@ -57,126 +84,160 @@ for(favMovies in movies){
 }*/
 
 //STEP 8
-/*let movies = ["Resident Evil","Rambo","Ace Venture", "Alien", "The Terminator 2", "Rocky", "RockyII"];
-let favMovies
-let leastFavMovies;
-let i;
+/*let favMovies = ["Resident Evil", "Ace Venture", "Alien", "RockyII"];
+let leastFavMovies =["Rambo", "The Terminator 2", "Rocky"];
 
 window.console.log("Movies I like: ");
+let i;
+for(i=0;i<favMovies.length;i++){
+    window.console.log(favMovies[i]);
+}
+window.console.log("Movies I regret watching: ");
+let a;
+for(a=0;a<leastFavMovies.length;a++){
+    window.console.log(leastFavMovies[a]);
+}
+*/
+//STEP 9
+/*let favMovies = ["Resident Evil", "Ace Venture", "Alien", "RockyII"];
+let leastFavMovies =["Rambo", "The Terminator 2", "Rocky"];
+let movies = favMovies.concat(leastFavMovies);
 
-for(i=0;i<movies.length;i++){
-    window.console.log(movies[i]);
+window.console.log(movies.reverse());*/
+
+//STEP 10
+/*let favMovies = ["Resident Evil", "Ace Venture", "Alien", "RockyII"];
+let leastFavMovies =["Rambo", "The Terminator 2", "Rocky"];
+let movies = favMovies.concat(leastFavMovies);
+
+function lastMovie(n){
+    return n[n.length -1];
 }
 
-window.console.log("Movies I regret watching: ");*/
-
-//STEP 9
-/*let movies = ["Resident Evil","Rambo","Ace Venture", "Alien", "The Terminator 2", "Rocky", "RockyII"];
-let favMovies = movies.concat("Stargate","FFVII");
-
-window.console.log(favMovies.reverse());
-*/
-//STEP 10
-/*let movies = ["Resident Evil","Rambo","Ace Venture", "Alien", "The Terminator 2", "Rocky", "RockyII"];
-let favMovies;
-
-
-window.console.log(favMovies);*/
+window.console.log(movies+"\nThe last movie item is " +lastMovie(movies));*/
 
 //STEP 11
-/*let movies = ["Resident Evil","Rambo","Ace Venture", "Alien", "The Terminator 2", "Rocky", "RockyII"];
+/*let favMovies = ["Resident Evil", "Ace Venture", "Alien", "RockyII"];
+let leastFavMovies =["Rambo", "The Terminator 2", "Rocky"];
+let movies = favMovies.concat(leastFavMovies);
+
+function lastMovie(movie){
+    return movie[0];
+}
+
+window.console.log(movies+"\nThe First movie item is " +lastMovie(movies));*/
+
+//STEP 12
+/*
+let movies = ["Resident Evil","Rambo","Ace Venture", "Alien", "The Terminator 2", "Rocky", "RockyII"];
 movies.splice(1,2, "Chucky", "Hannibal");
 movies.splice(5,1, "RockyIII");
 
 window.console.log(movies);*/
-//STEP 12
-
 
 //STEP 13
-/*let employee1 =[];
-employee1[0] = "EmployeeID";
-employee1[1] = "Name";
-employee1[2] = "Title";
-employee1[3] = "Department";
-employee1[4] = "Current";
+// let employee1 =[];
+// employee1["EmployeeID"] = 5145;
+// employee1["Name"] = "Jeronimo";
+// employee1["Title"] = "Front End Developer";
+// employee1["Department"] = "Science and Mathematics";
+// employee1["Current"] = "yes";
 
-let employee2 = [];
-employee2[0] = "3243432";
-employee2[1] = "Jeronimo";
-employee2[2] = "Front End Developer";
-employee2[3] = "Science and Mathematics";
-employee2[4] = "Yes";
+// let employee2 = [];
+// employee2["EmployeeID"] = 1446;
+// employee2["Name"] = "Vanessa";
+// employee2["Title"] = "Work Social";
+// employee2["Department"] = "Immigrations";
+// employee2["Current"] = "no";
 
-let employees = employee1.concat(employee2);
-
-window.console.log(employees);*/
+// let merged = employee1.concat(employee2.forEach);
+// window.console.log(merged);
 
 //STEP 14
+// let employee1 =[];
+// employee1["EmployeeID"] = 5145;
+// employee1["Name"] = "Jeronimo";
+// employee1["Title"] = "Front End Developer";
+// employee1["Department"] = "Science and Mathematics";
+// employee1["Current"] = "yes";
 
+// let employee2 = [];
+// employee2["EmployeeID"] = 1446;
+// employee2["Name"] = "Vanessa";
+// employee2["Title"] = "Work Social";
+// employee2["Department"] = "Immigrations";
+// employee2["Current"] = "no";
+
+// function twoArray(array1, array2){
+//     for (let i = 0; i<array1.length;i++){
+//     return array2.push(array1[i]);
+//     // for (item in array1){
+//     //     array2[item] = array1[item];
+//     // }
+    
+//     }
+// }
+// let fin = twoArray(employee1, employee2);
+// window.console.log(fin);
 
 //STEP 15
 
+
 //STEP 16
-/*let movies = [["Resident Evil",5],["Rambo",3],["Ace Venture",4], ["Alien",4], ["The Terminator 2",5]];
-
-let filtMovies = movies.filter(function (e){
-    for(i=0; i < e.length; i=+1){
-        window.console.log(e[i,0]);
-    }    
-});*/
-
-
+// let movies = [["Resident Evil",5],["Rambo",3],["Ace Venture",4], ["Alien",4], ["The Terminator 2",5]];
 
 // let i;
-// let employees = [["Jessica",10],["Zak",9],["Fred",15],["Mike",5]];
-// for (i = 0; i < employees.length; i +=1) {
-//     window.document.write(employees[i][0]);
-// }
+
+// for (i = 0; i < movies.length; i +=1) {
+//   window.console.log(movies[i][0]);
+//  }
 
 //STEP 17
-/*
-let employees = [
-    "ZAK ZULCABA",
-    "JERO OCAMPOS",
-    "VANESSA MOLINA",
-    "BRUCE WILLIS"
-];
 
-showEmployee(employees);
+// let employees = [
+//     "LUIS MIGUEL",
+//     "JERO OCAMPOS",
+//     "VANESSA MOLINA",
+//     "BRUCE WILLIS"
+// ];
 
-function showEmployee(employee){
-    window.console.log("Employees:\n");
-    for(i=0;i<employee.length;i++){
-        window.console.log(employee[i]);
-    }
+// showEmployee(employees);
+
+// function showEmployee(employee){
+//     window.console.log("Employees:\n");
+//     for(i=0;i<employee.length;i++){
+//         window.console.log(employee[i]);
+//     }
     
-}*/
+// }
 
 //STEP 18
-/*function fb(e){
-   return e >0;
-}
+// function fb(e){
+// let x = typeof e;
+//    if(x === 'string' || e >0){
+//     return e;
+//    }
+// }
 
- function filterValues(val){
-     return val.filter(fb);
-}
+// function filterValues(val){
+//     return val.filter(fb);
+// }
 
-window.console.log(filterValues([58, '', 'abcd', true, null, false, 0]));*/
-
+// window.console.log(filterValues([58, '', 'abcd', true, null, false, 0]));
 
 //STEP 19
-/*let randoms = Array(10).fill(0).map(eachRandom);
+// let randoms = Array(10).fill(0).map(eachRandom);
 
-function eachRandom(){
-    return Math.floor(Math.random()*10);
-}
+// function eachRandom(){
+//     return Math.floor(Math.random()*10);
+// }
 
-window.console.log(randoms);*/
+// window.console.log("Numbers by random\n" +randoms);
 
 //STEP 20
-let numb = [15,80,55,11,55,69,0,2,3,7];
-let lg = numb.reduce(function(val1, val2){
-    return Math.max(val1,val2);
-});
+// let numb = [15,80,55,11,55,69,0,2,3,7];
+// let lg = numb.reduce(function(val1, val2){
+//     return Math.max(val1,val2);
+// });
 
-window.console.log("The largest number: "+lg);
+// window.console.log(numb+"\nThe largest number: "+lg);
