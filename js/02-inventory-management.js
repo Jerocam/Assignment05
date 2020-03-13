@@ -1,7 +1,17 @@
-function getInventory(){
 
-    let rugby=[], soccer=[], tennis=[],basket=[],golf=[],command;
-    let inventory;
+function displayMenu(){
+"use strict";
+    window.console.log("Welcome to the Jerocam Inventory!\nPlease type one of these lists\n");
+    window.console.log("'show' - it displays the list of inventory");
+    window.console.log("'add' - it adds a new item on the list of inventory");
+    window.console.log("'del' - it deletes a item from the list of inventory");
+    window.console.log("'exit' - Exit the program");
+    window.console.log("");
+}
+
+function getInventory(){
+"use strict";
+    let rugby=[], soccer=[], tennis=[],basket=[],golf=[];
     rugby.sku=32423;
     rugby.product="RUGBY BALL";
     rugby.quantity=25;
@@ -26,25 +36,20 @@ function getInventory(){
     golf.product="GOLF BALL";
     golf.quantity=985;
     golf.cost="$49.55";
-}
-    
-function displayMenu(){
-"use strict";
-    window.console.log("Welcome to the Jerocam Inventory!\nPlease type one of these lists\n");
-    window.console.log("'show' - it displays the list of inventory");
-    window.console.log("'add' - it adds a new item on the list of inventory");
-    window.console.log("'del' - it deletes a item from the list of inventory");
-    window.console.log("'exit' - Exit the program");
-    window.console.log("");
+
+    let inventory = [rugby, soccer, tennis, golf, basket];
+    return inventory;
 }
 
-function displayItem(a){
+function displayItem(x){
 "use strict";
-    let result = "";
-    for (let i in a){
-        result += a[i]+"\t";
-    }
-    window.console.log(result);
+    
+    window.console.log(x);
+    // let values;
+    // for (let i=0; i<x.length;i+=1){
+    //     window.console.log(x[i]); 
+    // }
+    // return values;
 }
 
 function addNewItem(ItemA){
@@ -72,17 +77,17 @@ function delItem(itemD){
 
 function main(){
 "use strict";
-    displayMenu();
-    let inv = [getInventory];
-    while(true){
-        command=window.prompt("Enter a command");
+let command;
+
+displayMenu();
+
+let inv = getInventory();
+
+while(true){
+    command=window.prompt("Enter a command");
         if(command!==null){
             if(command==='show'){
-            displayItem(rugby);
-            displayItem(soccer);
-            displayItem(tennis);
-            displayItem(golf);
-            displayItem(basket);
+            displayItem(inv);
             }
             else if(command==='add'){
             addNewItem(inv);
@@ -100,9 +105,8 @@ function main(){
         else{
             break;
         }
-        window.console.log("End");
+        //window.console.log("End");
     }
-
 }
 
 main();
