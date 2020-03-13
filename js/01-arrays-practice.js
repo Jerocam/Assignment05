@@ -141,17 +141,17 @@ window.console.log(movies);*/
 // employee1["Name"] = "Jeronimo";
 // employee1["Title"] = "Front End Developer";
 // employee1["Department"] = "Science and Mathematics";
-// employee1["Current"] = "yes";
+// employee1["Current"] = true;
 
 // let employee2 = [];
 // employee2["EmployeeID"] = 1446;
 // employee2["Name"] = "Vanessa";
 // employee2["Title"] = "Work Social";
 // employee2["Department"] = "Immigrations";
-// employee2["Current"] = "no";
+// employee2["Current"] = false;
 
-// let merged = employee1.concat(employee2.forEach);
-// window.console.log(merged);
+// let employees = [employee1, employee2];
+// window.console.log(employees);
 
 //STEP 14
 // let employee1 =[];
@@ -159,28 +159,43 @@ window.console.log(movies);*/
 // employee1["Name"] = "Jeronimo";
 // employee1["Title"] = "Front End Developer";
 // employee1["Department"] = "Science and Mathematics";
-// employee1["Current"] = "yes";
+// employee1["Current"] = true;
 
 // let employee2 = [];
 // employee2["EmployeeID"] = 1446;
 // employee2["Name"] = "Vanessa";
 // employee2["Title"] = "Work Social";
 // employee2["Department"] = "Immigrations";
-// employee2["Current"] = "no";
+// employee2["Current"] = false;
 
-// function twoArray(array1, array2){
-//     for (let i = 0; i<array1.length;i++){
-//     return array2.push(array1[i]);
-//     // for (item in array1){
-//     //     array2[item] = array1[item];
-//     // }
-    
-//     }
+// let employees = [employee1, employee2];
+
+// for (let i=0; i<employees.length;i+=1){
+//     console.log(employees[i]);
 // }
-// let fin = twoArray(employee1, employee2);
-// window.console.log(fin);
 
 //STEP 15
+let employee1 =[];
+employee1["EmployeeID"] = 5145;
+employee1["Name"] = "Jeronimo";
+employee1["Title"] = "Front End Developer";
+employee1["Department"] = "Science and Mathematics";
+employee1["Current"] = true;
+
+let employee2 = [];
+employee2["EmployeeID"] = 1446;
+employee2["Name"] = "Vanessa";
+employee2["Title"] = "Work Social";
+employee2["Department"] = "Immigrations";
+employee2["Current"] = false;
+
+let employee3 = [];
+employee2["EmployeeID"] = 1326;
+employee2["Name"] = "Carla";
+employee2["Title"] = "Chief";
+employee2["Department"] = "The Monkey Island";
+employee2["Current"] = false;
+
 
 
 //STEP 16
