@@ -1,4 +1,4 @@
-
+//FUNCTION DISPLAY THE LIST OF COMMANDS
 function displayMenu(){
 "use strict";
     window.console.log("Welcome to the Jerocam Inventory!\nPlease type one of these lists\n");
@@ -9,9 +9,12 @@ function displayMenu(){
     window.console.log("");
 }
 
+//FUNCTION ASSOCIATIVE ARRAYS AND RETURN VALUES OF EACH ARRAYS
 function getInventory(){
 "use strict";
-    let rugby=[], soccer=[], tennis=[],basket=[],golf=[];
+    
+    let rugby= [], soccer=[],tennis=[],basket=[],golf=[];
+    
     rugby.sku=32423;
     rugby.product="RUGBY BALL";
     rugby.quantity=25;
@@ -37,21 +40,20 @@ function getInventory(){
     golf.quantity=985;
     golf.cost="$49.55";
 
-    let inventory = [rugby, soccer, tennis, golf, basket];
+    let inventory = [rugby, soccer, tennis, basket, golf];
     return inventory;
+    
 }
 
+//FUNCTION DISPLAY ITEMS FROM ARRAYS
 function displayItem(x){
 "use strict";
-    
-    window.console.log(x);
-    // let values;
-    // for (let i=0; i<x.length;i+=1){
-    //     window.console.log(x[i]); 
-    // }
-    // return values;
+    for (let i=0; i<x.length;i+=1){
+        console.log(x[i]);
+    }
 }
 
+//FUNCTION ADD NEW ARRAY ITEM
 function addNewItem(ItemA){
     "use strict";
     ItemA=[];
@@ -63,6 +65,7 @@ function addNewItem(ItemA){
     window.console.log("Added - "+ItemA);
 }
 
+//FUNCTION DELETE AN ARRAY ITEM
 function delItem(itemD){
     "use strict";
     let num, inventory;
@@ -75,14 +78,15 @@ function delItem(itemD){
     }
 }
 
+//FUNCTION TO PROCESS ALL FUNCTIONS FROM ABOVE
 function main(){
 "use strict";
 let command;
-
+let inv = getInventory();
 displayMenu();
 
-let inv = getInventory();
 
+//WHILE IF IS TRUE OR FALSE FOR EACH COMMAND
 while(true){
     command=window.prompt("Enter a command");
         if(command!==null){
@@ -109,4 +113,4 @@ while(true){
     }
 }
 
-main();
+main();//CALL THE FUNCTION MAIN FOR RUNNING, PROCESSING AND DISPLAYING
