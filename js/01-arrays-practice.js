@@ -187,16 +187,22 @@ employee2["EmployeeID"] = 1446;
 employee2["Name"] = "Vanessa";
 employee2["Title"] = "Work Social";
 employee2["Department"] = "Immigrations";
-employee2["Current"] = false;
+employee2["Current"] = true;
 
 let employee3 = [];
-employee2["EmployeeID"] = 1326;
-employee2["Name"] = "Carla";
-employee2["Title"] = "Chief";
-employee2["Department"] = "The Monkey Island";
-employee2["Current"] = false;
+employee3["EmployeeID"] = 3446;
+employee3["Name"] = "Joanna";
+employee3["Title"] = "Police";
+employee3["Department"] = "NYC";
+employee3["Current"] = false;
 
+let employees = [employee1, employee2, employee3];
 
+for (let i=0; i<employees.length;i+=1){
+   if (employees[i].Current==true){
+       window.console.log(employees[i]);
+   }
+}
 
 //STEP 16
 // let movies = [["Resident Evil",5],["Rambo",3],["Ace Venture",4], ["Alien",4], ["The Terminator 2",5]];

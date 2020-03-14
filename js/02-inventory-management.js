@@ -48,34 +48,28 @@ function getInventory(){
 //FUNCTION DISPLAY ITEMS FROM ARRAYS
 function displayItem(x){
 "use strict";
-    for (let i=0; i<x.length;i+=1){
-        console.log(x[i]);
+    window.console.log('SKU\t '+ ' PRODUCT\t'+ ' QUANTITY\t'+ 'COST');
+    for (let i=0; i<x.length;i++){
+        console.log(
+        x[i].sku+'\t'+
+        x[i].product+'\t' +
+        x[i].quantity+'\t'+
+        x[i].cost);
     }
 }
 
-//FUNCTION ADD NEW ARRAY ITEM
-function addNewItem(ItemA){
+//FUNCTION UPDATE NEW ARRAY ITEM
+function updNewItem(ItemA){
     "use strict";
-    ItemA=[];
-    let item1 = window.prompt("Enter a new SKU Item");
-    let item2 = window.prompt("Enter a new PRODUCT Item");
-    let item3 = window.prompt("Enter a new QUANTITY Item");
-    let item4 = window.prompt("Enter a new COST Item");
-    ItemA.push(item1,item2,item3,item4);
-    window.console.log("Added - "+ItemA);
-}
-
-//FUNCTION DELETE AN ARRAY ITEM
-function delItem(itemD){
-    "use strict";
-    let num, inventory;
-    num = parseInt(window.prompt("Enter a number to delete an item"));
-    if(num<1 || num > itemD.length){
-        window.alert("Invalid input!")
-    }
-    else {
-        inventory = itemD.splice(num -1, 1);
-    }
+    let inv = getInventory();
+    let item1 = window.prompt("Enter the SKU number");
+    for(let x in ItemA){
+        if(item1==ItemA[x].sku){
+            let item2 = window.prompt("Enter a quantity of the item");
+            ItemA[x].quantity = item2;
+            window.console.log("UPDATED! - "+ItemA[x].sku+":"+ItemA[x].quantity);
+        }
+    }        
 }
 
 //FUNCTION TO PROCESS ALL FUNCTIONS FROM ABOVE
@@ -85,32 +79,27 @@ let command;
 let inv = getInventory();
 displayMenu();
 
-
-//WHILE IF IS TRUE OR FALSE FOR EACH COMMAND
-while(true){
-    command=window.prompt("Enter a command");
-        if(command!==null){
-            if(command==='show'){
-            displayItem(inv);
+    //WHILE IF IS TRUE OR FALSE FOR EACH COMMAND
+    while(true){
+        command=window.prompt("Enter a command");
+            if(command!==null){
+                if(command==='show'){
+                displayItem(inv);
+                }
+                else if(command==='update'){
+                updNewItem(inv);
+                }
+                else if(command==='exit'){
+                    break;
+                }
+                else {
+                    alert("Error! Invalid input");
+                }
             }
-            else if(command==='add'){
-            addNewItem(inv);
-            }
-            else if(command==='del'){
-            delItem();    
-            }
-            else if(command==='exit'){
+            else{
                 break;
             }
-            else {
-                alert("Error! Invalid input");
-            }
         }
-        else{
-            break;
-        }
-        //window.console.log("End");
-    }
 }
 
 main();//CALL THE FUNCTION MAIN FOR RUNNING, PROCESSING AND DISPLAYING
