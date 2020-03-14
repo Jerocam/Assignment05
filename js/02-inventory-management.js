@@ -69,6 +69,10 @@ function updNewItem(ItemA){
             ItemA[x].quantity = item2;
             window.console.log("UPDATED! - "+ItemA[x].sku+":"+ItemA[x].quantity);
         }
+        // else 
+        // {
+        //     alert("Unmatched number. Try it again");    //It is not good and I cannot figure out of that!
+        // }
     }        
 }
 
